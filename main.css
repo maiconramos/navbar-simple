@@ -1,0 +1,75 @@
+#corpo{
+    background-color: red;
+}
+#menuHambuguer{
+    position: absolute;
+    top: 20px;
+    filter: brightness(0) invert(1);
+    height: 20px;
+    width: 40px;
+    right: 10px;
+    z-index: 9999999;
+    display: none;
+}
+#menuHambuguer:hover{cursor: pointer}
+#menuHambuguer img{width: 100%}
+#barra-menu{
+    position: fixed;
+    width: 100%;
+    left: 50%;
+    transform: translateX(-50%);
+    top: 20px;
+    padding: 20px;
+    max-width: 900px;
+    background-color: rgb(255, 255, 255);
+    border-radius: 100px;
+    z-index: 9999;
+    box-shadow: 0px 0px 60px 0px rgba(107, 64, 195, 0.52);
+}
+#menu{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    list-style: none;
+    flex-wrap: wrap;
+    line-height: 1;
+    padding: 0;
+    margin: 0;
+}
+
+#menu li a{
+    text-transform: uppercase;
+    font-family: "MadeFutureX Bold";
+    font-weight: 700;
+    font-size: 16px;
+    text-decoration: none;
+    color: #2b1947;
+    line-height: 1;
+}
+#menu li a:hover{
+     color: #542f80;
+     text-decoration: underline;
+}
+@media (max-width: 980px){
+    #barra-menu{
+        display: none;
+        height: 100vh;
+        top: 0;
+        border-radius: 0;
+        text-align: center;
+        justify-content: center;
+        align-items: center;
+        background-color: #2b1947;
+        box-shadow: 0;
+    }
+    #menuHambuguer{display: block}
+    #menu{
+        display: block;  
+        margin-top: 40px;
+    }
+    #menu li{
+        width: 100%;
+        height: 3em;
+    }
+    #menu li a{color: white}
+}
